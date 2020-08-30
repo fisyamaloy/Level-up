@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DB000000"
+    tools:context=".ProcessTrainingActivity">
+
+    <TextView
+        android:id="@+id/alarmRestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="3:45"
+        android:textColor="#AAA8A8"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageAlarmRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageAlarmRest"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reps"
+        app:srcCompat="@drawable/ic_baseline_access_alarm_24" />
+
+    <TextView
+        android:id="@+id/reps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="10"
+        android:textColor="#AAA8A8"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queueSet" />
+
+    <Button
+        android:id="@+id/minusOne"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@drawable/buttons"
+        android:onClick="buttonMinusClicked"
+        android:text="-"
+        android:textColor="#DAD3D3"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/reps"
+        app:layout_constraintTop_toTopOf="@+id/reps" />
+
+    <Button
+        android:id="@+id/plusOne"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@drawable/buttons"
+        android:onClick="buttonPlusClicked"
+        android:text="+"
+        android:textColor="#DAD3D3"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/reps"
+        app:layout_constraintTop_toTopOf="@+id/reps" />
+
+    <TextView
+        android:id="@+id/queueSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/3"
+        android:textColor="#AAA8A8"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/finishSetId"
+        android:layout_width="294dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/buttons"
+        android:onClick="finishApproach"
+        android:text="Завершить подход"
+        android:textColor="#DAD3D3"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ы"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/llExercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#DB000000"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/sets"
+            android:textColor="#AAA8A8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Количество подходов: "
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/kg"
+            android:textColor="#AAA8A8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Отягощение: "
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/lastResults"
+            android:textColor="#AAA8A8"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_weight="0"
+            android:text="Последние результаты:"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:background="#DB000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llExercise">
+
+        <ImageView
+            android:id="@+id/imageAlarm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/alarmText"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="-8dp"
+            app:srcCompat="@drawable/ic_baseline_access_alarm_24" />
+
+        <TextView
+            android:id="@+id/alarmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#AAA8A8"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="29dp"
+            android:text="3:45"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imageLevel"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="40dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="78dp"
+            android:text="0"
+            android:textColor="#AAA8A8"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginBottom="26dp"
+            android:textColor="#DAD3D3"
+            android:background="@drawable/buttons"
+            android:onClick="startButtonClicked"
+            android:text="start"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons"
+            android:layout_alignBottom="@+id/start"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="clickOnButtonImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
